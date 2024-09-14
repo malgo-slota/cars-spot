@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      /* font-family: 'Roboto Condesend', sans-serif; */
+    }
+    body {
+      background: #F7F7F7;
+    }
+  }
