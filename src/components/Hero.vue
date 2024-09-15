@@ -25,16 +25,21 @@
         </button>
       </div>
     </div>
+  </div>
     <!-- hero images -->
-    <div>
+    <div class="flex absolute top-[47px] w-full h-[825px] z-[-1] overflow-hidden 
+                md:overflow-visible">
       <img src="/assets/hero-back.svg" 
             alt="background image"
-            class="absolute right-0 top-0 z-[-10] rotate-90 scale-150
-                  lg:right-[70px] md:rotate-0 md:scale-100"/>
+            class="absolute z-[-10] rotate-90 scale-150
+                    md:right-[71.95px] 
+                    md:top-[-47px]
+                    md:scale-100
+                    md:rotate-0
+                    md:block"/>
       <img src="/assets/hero.png" 
-            alt="image of black cars"  
-            class="absolute top-[434px] z-[-1] right-0 w-[85%]
-                  lg:top-[407px] lg:w-[1064px]" />
+            alt="image of black cars" 
+            class="absolute top-[360px] right-0 w-[1064px]"/>
     </div>
-  </div>
 </template>
+
