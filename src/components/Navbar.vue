@@ -1,17 +1,22 @@
 <template>
-  <div class="flex flex-row items-center py-[8px] mx-[10px]
-              lg:justify-between lg:py-[16px] lg:mx-[120px]">
+  <div class="flex flex-row items-center 
+              py-[8px] mx-[10px]
+              lg:justify-between 
+              lg:py-[16px] lg:mx-[120px]">
     <!-- nav left -->
     <div class="flex flex-row">
       <img  src="/assets/logo.svg"  
             alt="cars spot logo"/>
     </div>
     <!-- nav center -->
-    <div class="grow flex justify-end
+    <div class="flex justify-end grow
                 lg:justify-center">
       <!-- nav mobile -->
       <label  for="mobile-menu"
-              class="cursor-pointer border rounded-full p-1 flex
+              class="flex 
+                    border rounded-full 
+                    p-1 
+                    cursor-pointer
                     lg:hidden 
                     hover:scale-105">
           <span class="material-symbols-outlined">
@@ -22,14 +27,18 @@
               type="checkbox"
               id="mobile-menu" />
       <!-- links -->
-      <ul class="flex flex-row gap-[8px] font-roboto-flex text-[16px] justify-around absolute top-[47px] right-0 text-white p-2 w-full bg-blue
-                lg:w-auto lg:static lg:bg-blue/0 lg:text-gray-dark lg:justify-normal lg:gap-[24px] lg:visible
-                invisible peer-checked:visible">
+      <ul class="font-roboto-flex text-[16px] text-white 
+                  flex flex-row gap-[8px] justify-around
+                  absolute top-[47px] right-0 w-full p-2 bg-blue
+                  invisible
+                  lg:text-gray-dark lg:static lg:bg-blue/0 lg:justify-normal lg:gap-[24px] lg:w-auto
+                  lg:visible 
+                  peer-checked:visible">
         <li class="relative group">
           <a href="#">
             Galeria zdjęć
           </a>
-          <span class="absolute -bottom-1 left-0 h-0.5 w-0 transition-all bg-white 
+          <span class="absolute -bottom-1 left-0 h-0.5 w-0 bg-white transition-all
                     lg:bg-blue 
                     group-hover:w-full"></span>
         </li>
@@ -37,24 +46,27 @@
           <a href="#">
             FaQ
           </a>
-          <span class="absolute -bottom-1 left-0 h-0.5 w-0 transition-all bg-white 
+          <span class="absolute -bottom-1 left-0 h-0.5 w-0 bg-white transition-all
                     lg:bg-blue 
                       group-hover:w-full"></span>
         </li>
       </ul>
     </div>
-    <!-- nav right -->
+    <!-- nav right -->      
     <div>
-      <button class="w-auto h-auto flex items-center justify-center ml-[12px] bg-blue text-off-white rounded-full p-1 font-roboto-flex font-semibold text-[15px] tracking-tightest leading-low
-                    lg:py-[12px] lg:px-[24px] lg:w-[158px] lg:h-[47px] lg:ml-0 lg:rounded-lg">
+      <button class="font-roboto-flex text-[15px] font-semibold text-off-white tracking-tightest leading-low 
+                    flex items-center justify-center w-auto h-auto 
+                    ml-[12px] bg-blue rounded-full p-1 
+                    lg:w-[158px] lg:h-[47px] 
+                    lg:ml-0 lg:rounded-lg lg:py-[12px] lg:px-[24px]">
         <span class="hidden 
-                    lg:block
-                    hover:scale-105">
+                      lg:block
+                      hover:scale-105">
                       Zadzwoń do nas
         </span>
         <span class="material-symbols-outlined 
-                    lg:hidden
-                    hover:scale-105">
+                      lg:hidden
+                      hover:scale-105">
                       call
         </span> 
       </button>

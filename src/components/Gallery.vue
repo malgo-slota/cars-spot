@@ -42,24 +42,26 @@ export default {
             const totalCards = this.images.length
             this.width = innerWidth / totalCards
         },
+
         next(index) {
-           switch(index) {
-            case 0:
-                this.translateValue = 0
-                break;
-            case 1:
-                this.translateValue = this.width
-                break;
-            case 2:
-                this.translateValue = this.width *2
-                break;
-            case 3:
-                this.translateValue = this.width *3
-                break;
-            case 4:
-                this.translateValue = this.width *4
-                break;
-           }
+            window.onresize = this.getWidth();
+            switch(index) {
+                case 0:
+                    this.translateValue = 0
+                    break;
+                case 1:
+                    this.translateValue = this.width
+                    break;
+                case 2:
+                    this.translateValue = this.width *2
+                    break;
+                case 3:
+                    this.translateValue = this.width *3
+                    break;
+                case 4:
+                    this.translateValue = this.width *4
+                    break;
+            }
         },
     }   
 }
@@ -69,22 +71,25 @@ export default {
     <div>
         <div class="mx-[40px] mt-[262px] pt-[80px]
                     lg:mx-[88px] lg:mt-[362px]">
-            <div class="text-blue font-['roboto_condensed'] text-[21.5px]">
+            <div class="font-roboto-condensend text-[21.5px] text-blue">
                     Prezentacja firmy
             </div>
-            <div class="font-['bebas_neue'] text-[32px] leading-high mb-[24px]
+            <div class="font-bebas-neue text-[32px] leading-high 
+                        mb-[24px]
                         lg:text-[40px]">
                     Zobacz naszą galerię zdjęć
             </div>
             
-            <div class="flex flex-row gap-[6px] font-roboto-flex text-[15px] tracking-tightest leadind-low text-center
+            <div class="font-roboto-flex text-[15px] tracking-tightest leadind-low text-center
+                        flex flex-row gap-[6px] 
                         lg:gap-[48px]">
                 <button
-                    class="text-blue font-semibold border-b" autofocus>
+                    class="font-semibold text-blue 
+                            border-b">
                     Samochody osobowe
                 </button>
                 <button
-                    class="hover:text-blue hover:font-semibold hover:border-b">
+                    class="hover:font-semibold hover:text-blue hover:border-b">
                     Samochody dostawcze
             </button>
             </div>
@@ -92,17 +97,17 @@ export default {
         <!-- photo gallery carousel -->
         <div class="flex flex-col"> 
             <div class="overflow-hidden 
-                        lg:ml-[88px]
                         ml-[44px]
-                        ">
-                <div class="gap-[64px] pt-[80px] pb-[48px]
+                        lg:ml-[88px]">
+                <div class="gap-[64px] 
+                            pt-[80px] pb-[48px]
                             whitespace-nowrap
                             transition-transform"
                     ref="img"
                     :style="{transform: `translateX(-${translateValue}px)`}">
 
-                    <div class="inline-flex  w-[300px] h-[223px] mr-6 
-                                lg:h-[446px] lg:mr-16 lg:w-[600px]"
+                    <div class="inline-flex h-[223px] w-[300px] mr-6 
+                                            lg:h-[446px] lg:w-[600px] lg:mr-16 "
                             v-for="image in images" 
                             :key="image.alt"
                             >
@@ -113,7 +118,8 @@ export default {
                 </div>
             </div>
             <!-- photo gallery navigation -->
-            <div class="flex gap-2.5 mb-[88px] self-center">
+            <div class="flex self-center gap-2.5 
+                        mb-[88px] ">
                 <div class="flex items-center">
                     <input type="radio" name="dots" id="dot-1" class="hidden peer" checked @click="next(0)"/>
                     <label for="dot-1" class="w-2 h-2 rounded-full bg-gray-light peer-checked:bg-blue"></label>
